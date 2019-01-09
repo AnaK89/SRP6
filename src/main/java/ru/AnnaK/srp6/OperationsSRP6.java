@@ -42,7 +42,7 @@ public class OperationsSRP6 {
         return Math.pow( B - (K * (Math.pow(g, x) % N)), a + u*x) % N;
     }
 
-    public double serverGenerateS (double A, double V, double u, double B, int N){ //S = ((A*(v^u % N)) ^ B) % N
-        return Math.pow(A * Math.pow(V, u) % N, B) % N;
+    public double serverGenerateS (double A, double V, double u, double b, int N){ //S = ((A*(v^u % N)) ^ B) % N
+        return Math.pow(A * Math.pow(V, u) % N, b) % N;
     }
 }

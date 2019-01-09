@@ -1,9 +1,11 @@
 package ru.AnnaK.srp6.dataModel;
 
-public class TransferData {
+import java.io.Serializable;
+
+public class TransferData implements Serializable {
     private String name;
     private Integer N;
-    private String S;
+    private String s;
     private Double g;
     private Double V;
     private Double A;
@@ -23,8 +25,8 @@ public class TransferData {
         return this;
     }
 
-    public TransferData addS(String S){
-        this.S = S;
+    public TransferData addSs(String s){
+        this.s = s;
         status.append("S");
         return this;
     }
@@ -61,8 +63,8 @@ public class TransferData {
         return N;
     }
 
-    public String getS() {
-        return S;
+    public String getSs() {
+        return s;
     }
 
     public Double getG() {
@@ -74,7 +76,7 @@ public class TransferData {
     }
 
     public Double getA() {
-        return A;
+        return A;//(A.toString().isEmpty())? 0.0 : A;
     }
 
     public Double getB() {
