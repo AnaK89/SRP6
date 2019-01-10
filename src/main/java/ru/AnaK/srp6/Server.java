@@ -1,4 +1,4 @@
-package ru.AnnaK.srp6;
+package ru.AnaK.srp6;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -7,7 +7,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import ru.AnnaK.srp6.handlers.ServerHandler;
+import ru.AnaK.srp6.handlers.ServerHandler;
 
 import java.net.InetSocketAddress;
 import java.util.logging.Logger;
@@ -32,6 +32,5 @@ public class Server {
         ChannelFuture channelFuture = serverBootstrap.bind().sync();
         channelFuture.channel().closeFuture().sync();
         log.info("-------------------- complete --------------------");
-        group.shutdownGracefully().sync();
     }
 }

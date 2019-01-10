@@ -1,4 +1,4 @@
-package ru.AnnaK.srp6;
+package ru.AnaK.srp6;
 
 public class MainServer {
     public static void main(String[] args) throws InterruptedException {
